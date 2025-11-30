@@ -50,7 +50,6 @@ The compiled bundle is emitted to `public/assets/dist/` and automatically loaded
 ### 4. Serve the PHP application
 - Configure Apache/Nginx (or start XAMPP) to point to `/public`.
 - Import the database schema under `database/` into MySQL.
-- Create a `.env` or configuration file as your environment requires (e.g., database credentials).
 
 ## 📁 Project Structure
 
@@ -92,13 +91,8 @@ Date,Category,Description,Amount
 
 Ensure categories in the CSV already exist in the system to avoid import errors.
 
-## 🔒 Security Notes
-- Password hashing, input validation, and CSRF protection should be enforced before going to production.
-- Store sensitive configuration outside version control (environment variables or secure config files).
-- Consider HTTPS-only cookies and stricter session lifetimes for deployment.
 
-## 📄 License
-Specify a license that matches your distribution goals (e.g., MIT, Apache-2.0). Add the full text in a `LICENSE` file when ready.
+
 
 ## 👥 Original Team
 Esther · Anas · Manga
