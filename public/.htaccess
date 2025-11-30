@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /Dev25Expenies/public/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/Dev25Expenies/public/assets/
+RewriteRule ^(.*)$ index.php [QSA,L]
