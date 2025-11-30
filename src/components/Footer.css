@@ -1,0 +1,27 @@
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
