@@ -1,13 +1,20 @@
-import Header from "./Header"
-import Main from "./Main"
+import Die from "./components/Die"
 
-
-export default function App(){
-    return(
-        <>
-            <Header />
-            <Main />
-        </>
+export default function App() {
+    return (
+        <main>
+            <div className="dice-container">
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+                <Die value={1} />
+            </div>
+        </main>
     )
 }
-
