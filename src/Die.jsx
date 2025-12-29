@@ -3,6 +3,7 @@ export default function Die(props) {
         backgroundColor: props.isHeld ? "#59E391" : "white"
     }
     
+    // component that render the buttons representing the dice
     return (
         <button 
             style={styles}
