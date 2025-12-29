@@ -20,8 +20,7 @@ export default function App() {
         return new Array(10)
             .fill(0)
             .map(() => ({
-                // value: Math.ceil(Math.random() * 6),
-                value: 5,
+                value: Math.ceil(Math.random() * 6),
                 isHeld: false,
                 id: nanoid()
             }))
