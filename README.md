@@ -1,31 +1,16 @@
-# Dev2025
+# React + Vite
 
-Welcome to the Dev2025 repository! This is a collaborative space for our developers' group to contribute, experiment, and build projects together.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Guidelines
+Currently, two official plugins are available:
 
-1. **Branches**  
-   - Each developer should create their own branch for work.  
-   - Branch naming convention: `feature/<your-name>` or `bugfix/<your-name>`.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. **Commits**  
-   - Write clear and concise commit messages.  
-   - Follow the format: `type(scope): description`. Example: `feat(auth): add login validation`.
+## React Compiler
 
-3. **Pull Requests**  
-   - Create a pull request (PR) when you want to merge your branch into `main`.  
-   - Ensure your code is reviewed before merging.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-4. **Code Style**  
-   - Follow consistent coding standards for readability.  
-   - Run linters/tests before pushing changes.
+## Expanding the ESLint configuration
 
-5. **Issues**  
-   - Use GitHub Issues to track bugs, tasks, or feature requests.  
-   - Assign yourself when working on an issue.
-
-## Getting Started
-
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/<your-org>/Dev2025.git
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
