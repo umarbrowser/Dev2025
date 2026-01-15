@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background: #0B2434;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+main {
+  background: #F5F5F5;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="%23ff0000"/><circle cx="80" cy="20" r="3" fill="%2300ff00"/><circle cx="50" cy="50" r="3" fill="%230000ff"/><circle cx="20" cy="80" r="3" fill="%23ffff00"/><circle cx="80" cy="80" r="3" fill="%23ff00ff"/></svg>') repeat;
+  animation: confetti-fall 3s ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #2B283A;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #4A4E74;
+  max-width: 400px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2B283A;
+}
+
+.dice-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.die {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.die:hover {
+  transform: scale(1.1);
+}
+
+.die.held {
+  background-color: #59E391;
+}
+
+.die-num {
+  font-size: 2rem;
+  color: #2B283A;
+}
+
+.roll-dice {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035FF;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.roll-dice:hover {
+  background-color: #3d25cc;
+}
+
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
