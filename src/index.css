@@ -12,3 +12,110 @@ body {
     display: flex;
     justify-content: center;
 }
+
+header {
+    font-weight: 500;
+    /* align-items: center; */
+    text-align: center;
+}
+
+header > h1 {
+    color: #F9F4DA;
+    font-size: 20px;
+}
+
+header > p {
+  font-size: 14px;
+  max-width: 400px;
+  color: #8E8E8E;
+  
+}
+
+main {
+  text-align: center;
+}
+
+main > section.message{
+  background-color: #10A95B;
+  padding: 6px 6px;
+  border-radius: 4px;
+  color: #F9F4DA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 15px;
+  max-width: 400px;;
+}
+
+main > section.message > h2{
+  margin: 3px;
+  font-size: small;
+}
+
+main > section.message > p{
+  margin: 3px;
+  font-size: medium;
+}
+section.languages {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  justify-content: center;
+  gap: 5px;
+}
+section.languages > span{
+  /* border-bottom: black 10px solid; */
+  border-radius: 4px;
+  padding: 3px;
+}
+
+section.selected-word{
+  margin: 25px;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+section.selected-word > span {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  color: white;
+  border-bottom: 1px white solid;  
+  font-size:20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+section.keyboard {
+  display:  flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  justify-content: center;
+  gap: 8px;
+}
+section.keyboard > button{
+  background-color: #FCBA29;
+  color: #262626;
+  padding: 8px ;
+  border: none;
+  border-radius: 2px;
+  height: 35px;
+  width: 35px;
+  border: 1px solid #D7D7D7;
+}
+
+button.new-game{
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    margin: 15px;
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: larger;
+    color:#262626;
+}
