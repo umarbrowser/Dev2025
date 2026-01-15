@@ -9,7 +9,7 @@ function App() {
       cuisine: "Italian",
       ingredients: ["spaghetti", "eggs", "bacon", "parmesan cheese", "black pepper"],
       instructions: "Cook spaghetti. Fry bacon. Mix eggs and cheese. Combine everything while pasta is hot.",
-      imageUrl: "https://source.unsplash.com/random/400x300?spaghetti"
+      imageUrl: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop"
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ function App() {
       cuisine: "Indian",
       ingredients: ["chicken", "curry powder", "onions", "tomatoes", "coconut milk"],
       instructions: "Cook chicken with onions. Add curry powder and tomatoes. Simmer with coconut milk.",
-      imageUrl: "https://source.unsplash.com/random/400x300?curry"
+      imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop"
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ function App() {
       cuisine: "Japanese",
       ingredients: ["rice", "nori", "fish", "cucumber", "avocado"],
       instructions: "Cook and season rice. Place rice on nori. Add fillings. Roll tightly and slice.",
-      imageUrl: "https://source.unsplash.com/random/400x300?sushi"
+      imageUrl: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop"
     }
   ])
 
