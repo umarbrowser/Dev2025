@@ -36,7 +36,7 @@ main {
 }
 
 main > section.message{
-  background-color: #10A95B;
+  background-color: transparent;
   padding: 6px 6px;
   border-radius: 4px;
   color: #F9F4DA;
@@ -44,8 +44,11 @@ main > section.message{
   flex-direction: column;
   align-items: center;
   margin-block: 15px;
-  max-width: 400px;;
+  max-width: 400px;
+   min-height: 60px;
+
 }
+
 
 main > section.message > h2{
   margin: 3px;
@@ -55,6 +58,12 @@ main > section.message > h2{
 main > section.message > p{
   margin: 3px;
   font-size: medium;
+}
+main > section.won{
+   background-color: #10A95B;
+}
+main > section.lost{
+  background-color: #BA2A2A;
 }
 section.languages {
   display: flex;
@@ -67,7 +76,25 @@ section.languages > span{
   /* border-bottom: black 10px solid; */
   border-radius: 4px;
   padding: 3px;
+  position: relative;
 }
+
+
+section.languages > span.language.lost::before{
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
 
 section.selected-word{
   margin: 25px;
@@ -91,6 +118,22 @@ section.selected-word > span {
 }
 
 
+/* Dimmed overlay with skull on "lost" languages */
+/* span.chip.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+
+
 section.keyboard {
   display:  flex;
   flex-wrap: wrap;
@@ -107,6 +150,13 @@ section.keyboard > button{
   height: 35px;
   width: 35px;
   border: 1px solid #D7D7D7;
+}
+
+section.keyboard > button.correct{
+  background-color: #10A95B;
+}
+section.keyboard > button.wrong{
+  background-color: red;
 }
 
 button.new-game{
