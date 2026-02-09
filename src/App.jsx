@@ -55,18 +55,36 @@ export default function AssemblyEndgame() {
 
   
   // selected word place holder and state variable
-  const letterElements = word.toUpperCase().split("").map((char, index) => {
+  let letterElements = word.toUpperCase().split("").map((char, index) => {
     const isGuessed = guessedLetters.includes(char)
     if(isGuessed){
       return(
         <span key={index}>{char}</span>
       )
     }else{
+      if (isGameOver && isGameLost) {
+        return(
+          <span key={index} className="missed">{char}</span>
+        )
+      }
       return(
         <span key={index}></span>
       )
     }
   })
+
+
+
+  // // show the word when the game is over
+  // if (isGameOver && isGameLost) {
+  //   // selected word place holder and state variable
+  //   letterElements = word.toUpperCase().split("").map((char, index) => {
+  //    return(
+  //       <span key={index}>{char}</span>
+  //     )
+  // })
+  // }
+
 
   
   // console.log(guessedLetters)
