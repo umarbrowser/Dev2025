@@ -61,9 +61,19 @@ main > section.message > p{
 }
 main > section.won{
    background-color: #10A95B;
+   border: 1px dashed #323232;
+   justify-content: center;
 }
 main > section.lost{
   background-color: #BA2A2A;
+  border: 1px dashed #323232;
+  justify-content: center;
+}
+
+main > section.farewell {
+  background-color: #7A5EA7;
+  border: 1px dashed #323232;
+  justify-content: center;
 }
 section.languages {
   display: flex;
@@ -157,6 +167,10 @@ section.keyboard > button.correct{
 }
 section.keyboard > button.wrong{
   background-color: red;
+}
+
+section.keyboard > button:disabled {
+  opacity: 0.5;
 }
 
 button.new-game{

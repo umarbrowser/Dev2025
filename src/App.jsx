@@ -1,18 +1,18 @@
 import React from "react"
 import { languages } from "./languages"
 import clsx from 'clsx';
-import {getFarewellText} from "./utils"
+import {getFarewellText, generateWord} from "./utils"
+import Confetti from "react-confetti"
 
 export default function AssemblyEndgame() {
 
   // state values
   const [guessedLetters, setGuessedLetters] = React.useState([])
-  const [word, setWord] = React.useState("assembly")
+  const [word, setWord] = React.useState(() =>generateWord())
 
 
   // static values
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
-  let fareWellTextMessage = ""  
 
 
   // derived values
@@ -24,6 +24,11 @@ export default function AssemblyEndgame() {
   const isGameLost = wrongGuessCount >= languages.length -1
   const isGameOver = isGameWon || isGameLost
   console.log("is game over: ", isGameOver)
+  const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
+  const isLastGuessIncorrect = lastGuessedLetter && !word.toUpperCase().includes(lastGuessedLetter)
+  const fareWellTextMessage = isLastGuessIncorrect && (wrongGuessCount - 1) < languages.length
+    ? getFarewellText(languages[wrongGuessCount - 1].name) 
+    : ""
   
   
   // programming languages list 
@@ -78,6 +83,7 @@ export default function AssemblyEndgame() {
     return(
     <button 
     onClick={handleKeyboardClick}
+    disabled={isGameOver}
     className={clsx(isCorrect && "correct", isWrong && "wrong")}
     key={index}>{char}</button>
     )
@@ -92,10 +98,6 @@ export default function AssemblyEndgame() {
     setGuessedLetters(prevGuessedLetters => {
       const lettersSet = new Set(prevGuessedLetters)
       lettersSet.add(letter)
-      if (!word.includes(letter)){
-        fareWellTextMessage = getFarewellText(languages[wrongGuessCount].name)
-        console.log(fareWellTextMessage)
-      }
       return Array.from(lettersSet)
     })
     console.log(guessedLetters)
@@ -103,18 +105,20 @@ export default function AssemblyEndgame() {
  
   function reset() {
     setGuessedLetters([])
-    setWord("assembly")
+    setWord(generateWord())
   }
 
 
   const className = clsx({
     message: true,
     won: isGameWon,
-    lost: isGameLost
+    lost: isGameLost,
+    farewell: !isGameOver && isLastGuessIncorrect
     })
 
     return (
         <main>
+            {isGameWon && <Confetti />}
             <header>
                 <h1>Assembly: Endgame</h1>
                 <p>Guess the word within 8 attempts to keep the 
@@ -137,7 +141,9 @@ export default function AssemblyEndgame() {
                         <p>You lose! Better start learning Assembly 😭</p>
                         </>
                       ) : (
-                        ""
+                        fareWellTextMessage && (
+                          <p>{fareWellTextMessage}</p>
+                        )
                       )
                     )
                   }
