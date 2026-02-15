@@ -75,15 +75,6 @@ export default function AssemblyEndgame() {
 
 
 
-  // // show the word when the game is over
-  // if (isGameOver && isGameLost) {
-  //   // selected word place holder and state variable
-  //   letterElements = word.toUpperCase().split("").map((char, index) => {
-  //    return(
-  //       <span key={index}>{char}</span>
-  //     )
-  // })
-  // }
 
 
   
